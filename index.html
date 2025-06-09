@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matsanela Ai - Chat Bot Edukatif</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <h1 class="chat-title">Matsanela Ai</h1>
+            <p class="chat-subtitle">Asisten Edukatif Anda</p>
+        </header>
+
+        <main class="chat-messages" id="chat-messages">
+            <!-- Initial message from AI -->
+            <div class="message bot-message fade-in">
+                <div class="avatar bot-avatar">M</div>
+                <div class="message-content">
+                    <p>Halo! Saya Matsanela Ai, asisten edukatif Anda. Ada yang bisa saya bantu hari ini?</p>
+                </div>
+            </div>
+            <!-- Chat messages will be appended here -->
+            <div class="typing-indicator" id="typing-indicator">
+                <div class="dot dot-1"></div>
+                <div class="dot dot-2"></div>
+                <div class="dot dot-3"></div>
+            </div>
+        </main>
+
+        <footer class="chat-input-area">
+            <div id="image-preview-container" class="image-preview-container">
+                <img id="image-preview" src="" alt="Image Preview">
+                <button id="clear-image-button" class="clear-image-button"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="input-wrapper">
+                <input type="file" id="image-upload" accept="image/*" hidden>
+                <button id="upload-image-button" class="icon-button" aria-label="Upload Image">
+                    <i class="fas fa-image"></i>
+                </button>
+                <textarea id="user-input" placeholder="Ketik pesan Anda..." rows="1"></textarea>
+                <button id="send-button" class="send-button" aria-label="Kirim Pesan">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
